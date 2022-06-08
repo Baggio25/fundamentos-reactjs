@@ -1,7 +1,13 @@
-export function Avatar() {
+import styles from "./Avatar.module.css";
+
+
+export function Avatar({ hasBorder = true, src }) {
   return (
     <>
-      <img className={styles.avatar} src="https://github.com/Baggio25.png" />
+      <img
+        className={hasBorder ? styles.avatarWithBorder : styles.avatar}
+        src={src}
+      />
     </>
   );
 }
